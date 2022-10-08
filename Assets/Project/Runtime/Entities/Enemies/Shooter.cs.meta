@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3bffaf90e511b4f42b21822f1016f1da
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - shipState: {instanceID: 0}
+  - cannonBall: {fileID: 9199716335926297887, guid: dd9290904d7c7a5449fb8027437d0a4d, type: 3}
+  - hitVFX: {fileID: 6507663587978439422, guid: 17409d385dffa3d47a0fb2740d1d0f1a, type: 3}
+  - healthBar: {instanceID: 0}
+  - gameplayUI: {instanceID: 0}
+  - selectedCannon: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

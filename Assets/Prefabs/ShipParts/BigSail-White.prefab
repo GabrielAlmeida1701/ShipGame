@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3511819420223055466
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5678639474915068857, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678639474915068857, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -436144262, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 5678639474915068857, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 506221157, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 5678639474915068857, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 841465156, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 5892508307447707094, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -436144262, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394099384004131189, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804090603758211087, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: state
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804090603758211087, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: offStatesSprites.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804090603758211087, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -436144262, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 6804090603758211087, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 506221157, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 6804090603758211087, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: statesSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 841465156, guid: a1d340224c3632848ab4137d8aa5949f, type: 3}
+    - target: {fileID: 7359902532010552678, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
+      propertyPath: m_Name
+      value: BigSail-White
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2276053d44aeea547993b5c91b4b3875, type: 3}
