@@ -1,7 +1,7 @@
 ﻿using ShipGame.ShipElements;
 using UnityEditor;
 
-namespace ShipGameEditor.Elements
+namespace ShipGameEditor.ShipElements
 {
     [CustomEditor(typeof(Sail))]
     public class SailEditor : Editor

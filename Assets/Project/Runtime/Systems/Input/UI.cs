@@ -21,6 +21,8 @@ namespace ShipGame.Systems.Input
             }
         }
 
+        private void OnPoint(InputValue _) => Utils.CheckInputDevice(input);
+
         private void OnCancel(InputValue _)
         {
             Utils.CheckInputDevice(input);

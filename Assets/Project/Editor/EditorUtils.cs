@@ -37,5 +37,10 @@ namespace ShipGameEditor
                 else EditorSceneManager.MarkSceneDirty((target as Component).gameObject.scene);
             }
         }
+
+        public static T ObjectField<T>(string label, T value, bool allowSceneObjects = true) where T : Object
+        {
+            return EditorGUILayout.ObjectField(label, value, typeof(T), allowSceneObjects) as T;
+        }
     }
 }

@@ -129,7 +129,7 @@ namespace ShipGame
                 SetSessionTime(1);
 
             if (!PlayerPrefs.HasKey(enemySpawnRateKey))
-                SetSpawnRate(1);
+                SetSpawnRate(10);
         }
 
         public static void GoToGameplay() => Instance.StartCoroutine(Instance.LoadScenes(true));

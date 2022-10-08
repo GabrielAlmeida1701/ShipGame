@@ -24,7 +24,6 @@ namespace ShipGame.Entities.PlayerEntity
             UnityEditor.AssemblyReloadEvents.afterAssemblyReload -= SetInputs;
 #endif
         }
-        #endregion
 
         private void SetInputs()
         {
@@ -41,6 +40,7 @@ namespace ShipGame.Entities.PlayerEntity
             InputManager.onNextCannon -= OnNextCannon;
             InputManager.onShoot -= OnShoot;
         }
+        #endregion
 
         public void OnMove(InputValue value)
         {
