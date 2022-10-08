@@ -31043,6 +31043,11 @@ MonoBehaviour:
   - {fileID: 7256714144287545346, guid: 23c7931b7b722c0448f5a2bc4f80729b, type: 3}
   - {fileID: 3041934121873882784, guid: 3815371fdf0d4eb4fa318b853ca363c4, type: 3}
   - {fileID: 3730285425180046070, guid: 19768558c707aed4e8c91a75fac4cd47, type: 3}
+  spawnChance:
+  - 0.40603933
+  - 0.31303936
+  - 0.2279385
+  - 0.052999936
   avaliableAreas:
   - m_Center: {x: -28.20959, y: 13.498089, z: 0}
     m_Extent: {x: 1.1649857, y: 7.7212963, z: 0.5}
@@ -31050,6 +31055,7 @@ MonoBehaviour:
     m_Extent: {x: 0.8578148, y: 5.892456, z: 0.5}
   - m_Center: {x: 0, y: -23.364258, z: 0}
     m_Extent: {x: 11.45406, y: 1.402998, z: 0.5}
+  orderedSpawnChance: []
 --- !u!1 &1680720731
 GameObject:
   m_ObjectHideFlags: 0
