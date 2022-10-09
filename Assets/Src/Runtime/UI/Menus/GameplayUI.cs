@@ -37,14 +37,20 @@ namespace ShipGame.UI.Menus
 
             timer = sessionTime * 60;
             timerText.text = $"{sessionTime}:00";
-            Player.Instance.gameplayUI = this;
             enemies = new List<Ship>();
+
+            if (Player.Instance)
+                Player.Instance.gameplayUI = this;
 
             StartCoroutine(SpawnEnemy());
         }
 
         private void Update()
         {
+#if UNITY_EDITOR
+            if(Player.Instance && !Player.Instance.gameplayUI)
+                Player.Instance.gameplayUI = this;
+#endif
             if (!GameManager.IsPlaying) return;
             UpdateTimer();
         }
