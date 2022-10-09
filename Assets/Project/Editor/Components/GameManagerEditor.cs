@@ -8,7 +8,6 @@ namespace ShipGameEditor.Components
     [CustomEditor(typeof(GameManager))]
     public class GameManagerEditor : Editor
     {
-        private GameManager gameManager => target as GameManager;
         private bool canLoadPlayer;
         private bool canLoadMenu;
         private bool canLoadGame;

@@ -32,6 +32,8 @@ namespace ShipGame.UI.Elements
         private void ClearEvents() => Utils.onChangeInput -= SetInputIcon;
         #endregion
 
+        private void Start() => SetInputIcon();
+
         private void SetInputIcon() => image.sprite = hintInputIcons[(int)Utils.InputType];
     }
 }

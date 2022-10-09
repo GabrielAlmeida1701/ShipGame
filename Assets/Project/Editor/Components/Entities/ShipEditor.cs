@@ -11,8 +11,15 @@ namespace ShipGameEditor.Entities
     {
         protected Ship ship => target as Ship;
 
-        private void OnEnable()
+        private static bool showObstacleAvoidance;
+        private SerializedProperty groundLayer;
+        private SerializedProperty viewDistance;
+
+        protected virtual void OnEnable()
         {
+            groundLayer = serializedObject.FindProperty("groundLayer");
+            viewDistance = serializedObject.FindProperty("viewDistance");
+
             referencesProperties = GetProperties(defaultReferenceProperties);
             gameplayProperties = GetProperties(defaultValuesProperties);
             LoadReferences();
@@ -40,6 +47,19 @@ namespace ShipGameEditor.Entities
 
                 serializedObject.ApplyModifiedProperties();
             }
+        }
+
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+
+            showObstacleAvoidance = EditorGUILayout.Foldout(showObstacleAvoidance, "Obstacle Avoidance Settings");
+            if (showObstacleAvoidance)
+            {
+                EditorGUILayout.PropertyField(groundLayer);
+                EditorGUILayout.PropertyField(viewDistance);
+            }
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }

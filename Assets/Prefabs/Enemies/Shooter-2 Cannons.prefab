@@ -618,6 +618,10 @@ MonoBehaviour:
   nextState: 0
   damageToNextState: 0
   keepAfterDeath: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  viewDistance: 5
   layers:
     serializedVersion: 2
     m_Bits: 192

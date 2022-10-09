@@ -9,8 +9,8 @@ namespace ShipGameEditor.Entities
         protected readonly string[] defaultReferenceProperties = { "shipState", "hitVFX", "cannonBall", "cannons" };
         protected readonly string[] defaultValuesProperties = { "life", "speed", "turnSpeed", "reloadTime" };
 
-        private bool showRefs;
-        private bool showGamplay = true;
+        private static bool showRefs;
+        private static bool showGamplay = true;
 
         protected List<SerializedProperty> referencesProperties = new List<SerializedProperty>();
         protected List<SerializedProperty> gameplayProperties = new List<SerializedProperty>();

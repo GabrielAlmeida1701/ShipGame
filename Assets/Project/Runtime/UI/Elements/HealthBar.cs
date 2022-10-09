@@ -38,7 +38,10 @@ namespace ShipGame.UI.Elements
             Vector2 position = Utils.MainCamera.WorldToScreenPoint(shipPosition);
 
             rectTransform.anchoredPosition = position;
-            IsVisible = position.x > 0 && position.x < Screen.width && position.y > 0 && position.y < Screen.height;
+
+            bool insideX = position.x + rectTransform.sizeDelta.x > 0 && position.x - rectTransform.sizeDelta.y < Screen.width;
+            bool insideY = position.y + rectTransform.sizeDelta.y > 0 && position.y - rectTransform.sizeDelta.y < Screen.height;
+            IsVisible = insideX && insideY;
         }
 
         public void UpdateHealthBar()

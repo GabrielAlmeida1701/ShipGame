@@ -26,11 +26,7 @@ namespace ShipGame.Systems.Input
             GameManager.IsPlaying = false;
         }
 
-        public static void SwitchToGameplay()
-        {
-            Actions.SwitchActionMap("gameplay");
-            //GameManager.IsPlaying = true;
-        }
+        public static void SwitchToGameplay() => Actions.SwitchActionMap("gameplay");
 
         private void SwitchActionMap(string map) => input.currentActionMap = inputActions.FindActionMap(map);
     }

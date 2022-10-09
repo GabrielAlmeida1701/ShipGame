@@ -41,9 +41,6 @@ namespace ShipGame.Entities.Enemies
                 lookAt -= transform.up * 2;
                 lookAt += Player.Instance.transform.position;
 
-                Debug.DrawLine(lookAt - Vector3.right / 2, lookAt + Vector3.right / 2);
-                Debug.DrawLine(lookAt - Vector3.up / 2, lookAt + Vector3.up / 2);
-
                 float rotate = Vector3.Cross((lookAt - transform.position).normalized, transform.up).z;
                 transform.Rotate(0, 0, rotate * turnSpeed * Time.deltaTime);
                 transform.Translate(0, -speed * Time.deltaTime, 0);

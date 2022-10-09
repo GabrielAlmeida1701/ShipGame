@@ -12,21 +12,20 @@ namespace ShipGameEditor.Entities
         private Color outterCircle = new Color(.31f, .46f, .66f);
         private Color middleCircle = new Color(1f, 0, 0, .6f);
 
-        private bool showAll;
+        private bool showRange;
         private SerializedProperty minDist, maxDist, layers;
-        private Player player;
+        private Transform reference;
 
-        private void OnEnable()
+        protected override void OnEnable()
         {
-            referencesProperties = GetProperties(defaultReferenceProperties);
-            gameplayProperties = GetProperties(defaultValuesProperties);
-            LoadReferences();
-
+            base.OnEnable();
             layers = serializedObject.FindProperty("layers");
             minDist = serializedObject.FindProperty("minDist");
             maxDist = serializedObject.FindProperty("maxDist");
 
-            player = FindObjectOfType<Player>();
+            var player = FindObjectOfType<Player>();
+            if (player) reference = player.transform;
+            else reference = ship.transform;
 
             if (maxDist.floatValue < .5f)
             {
@@ -49,8 +48,8 @@ namespace ShipGameEditor.Entities
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            showAll = EditorGUILayout.Foldout(showAll, "Range Settings");
-            if (showAll)
+            showRange = EditorGUILayout.Foldout(showRange, "Range Settings");
+            if (showRange)
             {
                 EditorGUI.indentLevel++;
                 EditorGUILayout.PropertyField(layers);
@@ -63,28 +62,29 @@ namespace ShipGameEditor.Entities
 
         private void OnSceneGUI()
         {
-            if (!player || maxDist == null || minDist == null) return;
+            if (maxDist == null || minDist == null) return;
 
             Handles.color = middleCircle;
-            Handles.RadiusHandle(Quaternion.identity, player.transform.position, (maxDist.floatValue + minDist.floatValue) / 2);
+            Handles.RadiusHandle(Quaternion.identity, reference.position, (maxDist.floatValue + minDist.floatValue) / 2);
 
             innerCircle.a = .2f;
             Handles.color = innerCircle;
-            Handles.DrawSolidArc(player.transform.position, Vector3.forward, Vector3.up, 360, minDist.floatValue);
+            Handles.DrawSolidArc(reference.position, Vector3.forward, Vector3.up, 360, minDist.floatValue);
 
             innerCircle.a = 1;
             Handles.color = innerCircle;
-            minDist.floatValue = Handles.RadiusHandle(Quaternion.identity, player.transform.position, minDist.floatValue);
+            minDist.floatValue = Handles.RadiusHandle(Quaternion.identity, reference.position, minDist.floatValue);
             minDist.floatValue = Mathf.Clamp(minDist.floatValue, .5f, maxDist.floatValue);
 
             outterCircle.a = .05f;
             Handles.color = outterCircle;
-            Handles.DrawSolidArc(player.transform.position, Vector3.forward, Vector3.up, 360, maxDist.floatValue);
+            Handles.DrawSolidArc(reference.position, Vector3.forward, Vector3.up, 360, maxDist.floatValue);
 
             outterCircle.a = 1;
             Handles.color = outterCircle;
-            maxDist.floatValue = Handles.RadiusHandle(Quaternion.identity, player.transform.position, maxDist.floatValue);
+            maxDist.floatValue = Handles.RadiusHandle(Quaternion.identity, reference.position, maxDist.floatValue);
             if (maxDist.floatValue < .5f) maxDist.floatValue = .5f;
+
             serializedObject.ApplyModifiedProperties();
         }
     }

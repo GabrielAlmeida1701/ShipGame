@@ -112,14 +112,13 @@ namespace ShipGame.Entities.PlayerEntity
         private IEnumerator ResetPosition()
         {
             yield return new WaitForSeconds(4.5f);
-            transform.position = Vector3.zero;
-            transform.rotation = startRotation;
+            transform.SetPositionAndRotation(Vector3.zero, startRotation);
             cameraFollow.SetPosition(Vector3.zero);
 
             points = 0;
             life = maxLife;
-            healthBar.SetShip(this);
             shipState.SetState(0);
+            healthBar.SetShip(this);
         }
         #endregion
 

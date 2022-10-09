@@ -26,7 +26,7 @@ namespace ShipGameEditor.PropertyDrawers
                 targetScene = AssetDatabase.GetAssetPath(newScene);
                 var sceneIndex = SceneUtility.GetBuildIndexByScenePath(targetScene);
                 if (newScene && sceneIndex == -1)
-                    Debug.LogError("This scene does not make part of the Build");
+                    Debug.LogError("This scene is not part of the Build");
 
                 property.stringValue = targetScene;
             }

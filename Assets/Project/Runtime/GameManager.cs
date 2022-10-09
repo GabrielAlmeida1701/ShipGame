@@ -57,7 +57,7 @@ namespace ShipGame
             {
                 List<AsyncOperation> operations = new List<AsyncOperation>();
 
-                if (!hasPlayer) operations.Add(SceneManager.LoadSceneAsync(playerScene));
+                if (!hasPlayer) operations.Add(SceneManager.LoadSceneAsync(playerScene, LoadSceneMode.Additive));
                 if (inMenu && inGame)
                 {
                     inMenu = false;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ShipGameEditor
 {
-    public class EditorUtils
+    public static class EditorUtils
     {
         public static void DefaultScriptField(MonoBehaviour target)
         {

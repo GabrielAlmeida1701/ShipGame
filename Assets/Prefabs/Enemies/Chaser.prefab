@@ -201,14 +201,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shipState: {fileID: 3809901837779933932}
   life: 1
-  damage: 1
   speed: 3.5
   turnSpeed: 60
   reloadTime: 5
   cannonBall: {fileID: 9199716335926297887, guid: dd9290904d7c7a5449fb8027437d0a4d, type: 3}
   cannons: []
-  selectedCannon: {fileID: 0}
   hitVFX: {fileID: 6507663587978439422, guid: 17409d385dffa3d47a0fb2740d1d0f1a, type: 3}
+  healthBar: {fileID: 0}
+  gameplayUI: {fileID: 0}
+  selectedCannon: {fileID: 0}
+  nextState: 0
+  damageToNextState: 0
+  keepAfterDeath: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  viewDistance: 5
 --- !u!1001 &791424633452874740
 PrefabInstance:
   m_ObjectHideFlags: 0
