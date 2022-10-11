@@ -10,7 +10,7 @@ namespace ShipGame.Entities.Enemies
         private int viewOffset;
         private Vector3 tempTarget;
 
-        [SerializeField] private LayerMask groundLayer = 1 >> 7;
+        [SerializeField] private LayerMask groundLayer = 1 << 7;
         [SerializeField] private int viewDistance = 5;
 
         protected float DistanceFromPlayer() => Vector3.Distance(transform.position, Player.Instance.transform.position);

@@ -126,6 +126,7 @@ namespace ShipGameEditor.Components.Entities
         {
             if (spawner.avaliableAreas == null || selectedArea < 0 || selectedArea >= spawner.avaliableAreas.Count) return;
 
+            RegisterClick();
             EditorGUI.BeginChangeCheck();
             Bounds bounds = spawner.avaliableAreas[selectedArea];
 
@@ -143,6 +144,51 @@ namespace ShipGameEditor.Components.Entities
 
                 spawner.avaliableAreas[selectedArea] = bounds;
                 serializedObject.ApplyModifiedProperties();
+            }
+        }
+
+        int controlID;
+        private void RegisterClick()
+        {
+            controlID = GUIUtility.GetControlID(FocusType.Passive);
+            var eType = Event.current.GetTypeForControl(controlID);
+
+            switch (eType)
+            {
+                case EventType.Layout:
+                    foreach (var area in spawner.avaliableAreas)
+                    {
+                        var screenPoint = Handles.matrix.MultiplyPoint(area.center);
+                        var distance = HandleUtility.DistanceToCircle(screenPoint, 2f);
+                        HandleUtility.AddControl(controlID, 5f + distance);
+                    }
+                    break;
+                case EventType.MouseDown:
+                    if (HandleUtility.nearestControl != controlID)
+                        return;
+
+                    var e = Event.current;
+                    if (e.button != 0) return;
+
+                    var ray = HandleUtility.GUIPointToWorldRay(e.mousePosition);
+                    var mouse = new Vector3(ray.origin.x, ray.origin.y, 0);
+
+                    int i = 0;
+                    foreach (var area in spawner.avaliableAreas)
+                    {
+                        if (area.Contains(mouse))
+                        {
+                            selectedArea = i;
+                            SceneView.lastActiveSceneView?.Repaint();
+                            Selection.activeGameObject = spawner.gameObject;
+                            GUIUtility.hotControl = controlID;
+                            Repaint();
+                            e.Use();
+                            break;
+                        }
+                        i++;
+                    }
+                    break;
             }
         }
 
