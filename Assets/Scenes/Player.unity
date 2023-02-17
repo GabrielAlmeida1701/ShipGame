@@ -202,7 +202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420034}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   m_Layer: 0
@@ -292,26 +291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1565873608}
   followSpeed: 0.5
---- !u!114 &519420034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AssetsPPU: 100
-  m_RefResolutionX: 1920
-  m_RefResolutionY: 1080
-  m_UpscaleRT: 1
-  m_PixelSnapping: 0
-  m_CropFrameX: 0
-  m_CropFrameY: 0
-  m_StretchFill: 0
 --- !u!1 &628622228
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,11 +655,11 @@ PrefabInstance:
       objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8238097770555935433, guid: 7101f4d305574b547aeda7245489cf6a, type: 3}
       propertyPath: heartSize.x
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8238097770555935433, guid: 7101f4d305574b547aeda7245489cf6a, type: 3}
       propertyPath: heartSize.y
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8238097770555935433, guid: 7101f4d305574b547aeda7245489cf6a, type: 3}
       propertyPath: counterFontSize
@@ -774,7 +753,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ReferenceResolution: {x: 960, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

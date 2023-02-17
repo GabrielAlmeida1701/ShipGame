@@ -2833,7 +2833,7 @@ MonoBehaviour:
   gameOverMenu: {fileID: 902624812}
   healthBarsParent: {fileID: 808837194}
   healthBarPrefab: {fileID: 5294469805969853620, guid: 7101f4d305574b547aeda7245489cf6a, type: 3}
-  heartIconSize: {x: 20, y: 20}
+  heartIconSize: {x: 10, y: 10}
   healthBarOffset: {x: 0, y: 1}
   timer: 0
   spawnRate: 0
@@ -31492,12 +31492,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 960, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -31694,10 +31694,10 @@ RectTransform:
   m_Father: {fileID: 902624811}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 644.6309, y: 631.1323}
+  m_SizeDelta: {x: -315.3691, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849818345
 MonoBehaviour:
